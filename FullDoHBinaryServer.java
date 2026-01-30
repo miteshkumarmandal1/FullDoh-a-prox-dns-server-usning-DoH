@@ -42,6 +42,8 @@ import java.util.concurrent.*;
  * - Run as Administrator/root to bind port 53.
  * - This is a pragmatic resolver/proxy — not a full authoritative server implementation.
  */
+
+//Kept all code in one file, so that anyone can run it easily using command prompt with one command java FullDoHBinaryServer.java
 public class FullDoHBinaryServer {
 
     private static final int PORT = 53;
@@ -366,4 +368,5 @@ public class FullDoHBinaryServer {
     private static void log(String s) { if (LOG) System.out.println("[" + Instant.now() + "] " + s); }
     private static void logf(String fmt, Object... args) { if (LOG) System.out.println("[" + Instant.now() + "] " + String.format(fmt, args)); }
 }
+
 
