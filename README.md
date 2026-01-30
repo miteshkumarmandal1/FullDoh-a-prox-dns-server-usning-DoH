@@ -68,3 +68,143 @@ This allows developers to observe and understand how DNS and DoH interact.
 
 ## 🏗️ Architecture (High-Level)
 
+Application
+↓
+Local DNS Proxy (FullDoH)
+↓
+HTTPS (DoH Resolver)
+↓
+DNS Response
+
+
+
+
+- DNS parsing happens locally  
+- Transport is HTTPS  
+- Responses are reconstructed before returning  
+
+---
+
+## 💻 Technology Stack
+
+- **Language:** Java  
+- **Networking:** Java networking APIs  
+- **Protocol Handling:** Binary DNS parsing  
+- **Transport:** HTTPS  
+- **Dependencies:** Minimal (standard Java libraries)  
+
+---
+
+## ▶️ Running the Project
+
+This repository includes a runnable Java class: FullDoHBinaryServer.java
+
+
+### Step-by-step (High-Level)
+
+1. Clone the repository  
+2. Open a command prompt / terminal  
+3. Navigate to the directory containing `FullDoHBinaryServer.java`  
+4. Run the server using:
+
+```bash
+java FullDoHBinaryServer.java
+
+
+## ⚙️ System DNS Configuration (Required)
+
+Before using this server, you must configure your system to use the machine where **FullDoH** is running as its DNS server.
+
+- If the proxy is running on your **local system**, use:
+  
+
+
+
+### Windows DNS Configuration Steps
+
+1. Open **Settings**
+2. Go to **Network & Internet**
+3. Select **Wi-Fi** or **Ethernet**
+4. Click on the **connected network**
+5. Click **Edit** under **DNS server assignment**
+6. Select **Manual**
+7. Enter the IP address of the system running this proxy server
+8. Save the changes
+
+⚠️ Always follow your organization’s network policies.
+
+---
+
+## 🔍 What You Can Observe
+
+When running locally, the server logs:
+
+- Incoming DNS queries  
+- Domain names  
+- Query types (A, AAAA, etc.)  
+- Resolved IP addresses  
+
+This visibility is useful for:
+
+- Debugging  
+- Learning  
+- Understanding DNS resolution patterns  
+
+---
+
+## 🔐 Security & Ethics Notice
+
+This project is for **educational and research purposes only**.
+
+If a website is blocked in a managed network:
+
+- ✅ The correct action is to request access  
+- ❌ Not to bypass controls  
+
+The author does not encourage or support misuse.
+
+---
+
+## 📚 What I Learned
+
+- DNS is a policy enforcement layer, not just a lookup service  
+- Encryption changes who you trust—not whether you trust  
+- Privacy and governance often conflict  
+- Protocol-level knowledge is essential for responsible engineering  
+
+---
+
+## 🧪 Possible Extensions
+
+- Add caching with TTL awareness  
+- Visualize DNS latency comparisons  
+- Support multiple DoH resolvers  
+- Add metrics for request timing  
+- Implement rate limiting for safety  
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome for:
+
+- Code readability improvements  
+- Documentation enhancements  
+- Test coverage  
+- Educational examples  
+
+Please keep contributions:
+
+- Ethical  
+- Legal  
+- Educational  
+
+---
+
+## 📝 Disclaimer
+
+This project is provided **as-is**, without warranty of any kind.  
+The author is not responsible for misuse.
+
+
+
