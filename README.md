@@ -109,7 +109,7 @@ This repository includes a runnable Java class: FullDoHBinaryServer.java
 
 ```bash
 java FullDoHBinaryServer.java
-
+```
 
 ## ⚙️ System DNS Configuration (Required)
 
