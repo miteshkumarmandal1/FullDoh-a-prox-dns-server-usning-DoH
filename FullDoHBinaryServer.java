@@ -1,10 +1,34 @@
+/*
+ * FullDoH - Local DNS-over-HTTPS (DoH) Proxy
+ *
+ * An educational Java server that translates standard DNS queries
+ * into DNS-over-HTTPS (DoH) requests and converts the responses back
+ * into DNS format for local clients.
+ *
+ * This project is intended for learning and research purposes only.
+ * It demonstrates DNS packet parsing, HTTPS transport, and protocol
+ * translation without attempting to bypass network security controls.
+ *
+ * Copyright © 2026 FullDoH Contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at:
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
 import java.net.*;
 import java.time.Instant;
 import java.util.*;
 import java.util.concurrent.*;
-
 /**
  * FullDoHBinaryServer
  *
@@ -342,3 +366,4 @@ public class FullDoHBinaryServer {
     private static void log(String s) { if (LOG) System.out.println("[" + Instant.now() + "] " + s); }
     private static void logf(String fmt, Object... args) { if (LOG) System.out.println("[" + Instant.now() + "] " + String.format(fmt, args)); }
 }
+
