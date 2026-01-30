@@ -1,5 +1,4 @@
 # FullDoh-a-prox-dns-server-usning-DoH
-# FullDoH
 
 ## A Local DNS-over-HTTPS Proxy (Educational Project)
 
