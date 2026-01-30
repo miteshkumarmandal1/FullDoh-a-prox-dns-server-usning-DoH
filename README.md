@@ -1,4 +1,5 @@
 # FullDoh-a-prox-dns-server-usning-DoH
+Author: Mitesh Kumar Mandal
 
 ## A Local DNS-over-HTTPS Proxy (Educational Project)
 
