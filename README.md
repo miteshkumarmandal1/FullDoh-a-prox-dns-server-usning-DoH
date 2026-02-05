@@ -116,7 +116,7 @@ java FullDoHBinaryServer.java
 
 Before using this server, you must configure your system to use the machine where **FullDoH** is running as its DNS server.
 
-- If the proxy is running on your **local system**, use:
+- If the proxy is running on your **local system**, use: 127.0.0.1 as your dns server.
   
 
 
@@ -160,7 +160,7 @@ This project is for **educational and research purposes only**.
 If a website is blocked in a managed network:
 
 - ✅ The correct action is to request access  
-- ❌ Not to bypass controls  
+- ❌ Not to bypass controls  because this server was developed, when I wanted to bypass the Network Website block system.
 
 The author does not encourage or support misuse.
 
